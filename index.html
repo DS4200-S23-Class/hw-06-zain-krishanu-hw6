@@ -1,15 +1,114 @@
-<!DOCTYPE html>
-<html lang='en'>
-
+<<!DOCTYPE html>
+<html> 
 
 <head>
-  <meta charset='utf-8'>
+    <meta charset=utf-8/>
+
+    <!-- Link stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <title>hw-06</title>
+    <!-- Include D3 library in head -->
+    <!-- Note: we use D3 v6 -->
+    <script src='js/d3.v6.1.1/d3.min.js'></script>
 
 </head>
 
 
 <body>
- 
+
+    <!--Header -->
+    <h1 class="centered">hw-06 - D3 Brushing & Linking</h1>
+
+
+    <div class="row">
+        <div class="left-column" id="plot1">
+
+            <!--create svg frame w/ proper axis + points -->
+            <svg id="frame">
+                <line id="line" x1="0" y1="500" x2="0" y2="0"/>
+                <line id="line" x1="0" y1="500" x2="550" y2="500"/>
+                <circle id="point" cx="50" cy="400" r="15"/>
+                <circle id="point" cx="100" cy="300" r="15"/>
+                <circle id="point" cx="300" cy="400" r="15"/>
+                <circle id="point" cx="450" cy="50" r="15"/>
+
+            </svg>
+        </div>
+
+        <!--right column-->
+        <div class="right-column" id="information">
+
+            <p id = "click-point"></p>
+
+            <h4> Choose Coordiantes for New Circle </h4>
+
+            <!--dropdowns for x and y coordinates-->
+            <form id ='show-pt'>
+
+              <label>Select X Coordinate:</label>
+              <input list = "x" id="x-coord">
+              <datalist id="x">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+                <option value="6">
+                <option value="7">
+                <option value="8">
+                <option value="9">s
+              </datalist>
+
+              <br>
+
+              <label>Select Y Coordinate:</label>
+              <input list = "y" id = "y-coord">
+              <datalist id="y">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+                <option value="6">
+                <option value="7">
+                <option value="8">
+                <option value="9">s
+              </datalist>
+        
+            </form>
+
+            <!--create button-->
+            <button type="button" onClick = "addPoint()" id="create-pt">Create</button>
+
+        </div>
+    </div>
+
+    <!-- new div for new flexbox row-->
+    <div class = "row">
+
+        <!--div for bar plot-->
+        <div class = "left-column" id = "plot2"></div>
+    </div>
+
+
+<br>
+
+<!--acknowledgements-->
+<h2 class = 'centered'>Acknowledgements</h2>
+<div>
+    <ul>
+      <li>https://dev.to/tqbit/how-to-create-svg-elements-with-javascript-4mmp"</li>
+      <li>https://www.w3schools.com/js/js_input_examples.asp</li>
+      <li>https://www.w3schools.com/js/js_htmldom_eventlistener.asp</li>
+      <li>https://www.geeksforgeeks.org/html-introduction/?ref=lbp</li>
+      <li>http://www.w3.org/2000/svg</li>
+      <li>https://www.w3schools.com/graphics/svg_intro.asp</li>
+    </ul>
+</div>
+
+<!--call javascript file-->
+<script src = "js/main.js"></script>
+
 </body>
 
 </html>

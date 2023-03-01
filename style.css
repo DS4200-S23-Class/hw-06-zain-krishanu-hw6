@@ -1,0 +1,56 @@
+/* set body text to Arial*/
+body {
+    font-family: Arial;
+}
+
+
+/* class to center to text */
+.centered {
+    text-align: center;
+}
+
+
+.row {
+    display: flex;
+
+  }  
+
+
+
+/* set flexbox columns to the left with 60% */
+.left-column {
+    flex: 60;
+}
+
+
+/* set flexbox column to the right at 40% */
+.right-column {
+    flex: 40;
+}
+
+
+/* create class for tooltip attributes*/
+.tooltip {
+  position: absolute;
+  background-color: white;
+  border:  solid;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+/* class to add border to svg circles*/
+.bordered {
+    stroke: green;
+    
+}
+
+/* set color of scatter points + bar */
+.point {
+  fill: darkred;
+}
+
+.bar {
+    fill: darkred;
+}
