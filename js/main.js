@@ -36,7 +36,7 @@ d3.csv("data/iris.csv").then((DATA) => {
     // add the color based on the species and specify the hex of each color
   const SPECIES_COLOR = d3.scaleOrdinal()
     .domain(["setosa", "versicolor", "virginica"])
-    .range(["red", "purple", "green"]);
+    .range(["green", "orange", "purple"]);
 
    
   const MAX_X_PLOT_1 = d3.max(DATA, (d) => {
